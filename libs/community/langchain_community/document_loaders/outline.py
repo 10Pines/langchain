@@ -1,5 +1,5 @@
 import os
-from typing import Any, Dict, Iterator, List, Tuple, Union
+from typing import Any, Dict, Iterator, List, Optional, Tuple
 
 import requests
 from langchain_core.documents import Document
@@ -29,8 +29,8 @@ class OutlineLoader(BaseLoader):
 
     def __init__(
         self,
-        outline_base_url: Union[str | None] = None,
-        outline_api_key: Union[str | None] = None,
+        outline_base_url: Optional[str] = None,
+        outline_api_key: Optional[str] = None,
         page_size: int = 25,
     ):
         """Initialize with url, api_key and requested page size for API results
